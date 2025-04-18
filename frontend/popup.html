@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepfake Detector</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2>Veriface</h2>
+        <div class="upload-box" id="uploadBox">
+            <!-- <input type="file" id="imageUpload" accept="image/*">
+            <label for="imageUpload">Upload Image</label> -->
+            <input type="file" id="imageUpload" accept="image/*">
+            <p>or drop a file, paste an image, or enter <a href="#" id="urlInput">URL</a></p>
+            <img id="previewImage" src="" alt="" style="display: none;">
+        </div>
+<select id="modelSelect">
+    <!-- <option value="EfficientNet">EfficientNet</option> -->
+    <option value="ResNet">ResNet</option>
+    <option value="DenseNet">DenseNet</option>
+</select>
+
+        <button id="analyzeBtn">Analyse</button>
+        <div id="result"></div>
+        <div class="grid">
+            <textarea id="feedback" placeholder="Tell us why you think this result is correct/incorrect"></textarea>
+            <button id="feedbackBtn">Give Feedback</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
